@@ -1,25 +1,34 @@
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import SearchNavbar from './components/SearchNavbar/SearchNavbar'
 // import MoviCard from './components/MovieCard/MovieCard';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import MovieData from './components/MovieData';
 import MovieList from './components/MovieList/MovieList';
+// import AddMovie from './components/Addmovie/AddMovie';
 
 function App() {
-  const [movieslist]=useState(MovieData);
+  const [movieslist,setMoviesList]=useState(MovieData);
   const [searchInput , setSearchInput ]=useState("")
-  const [searchrating,setSearchRating]=useState(0);
-
+  const [searchRating , setSearchRating]=useState(0);
+  const [newMovie , setNewMovie]=useState({});
+const[firstRender,setfirstRender]=useState(true);
+  useEffect(() => {
+    !firstRender
+     ?setMoviesList([...movieslist,newMovie])
+     :console.log("remmber")
+  },[newMovie]);
+  
   // console.log(MovieData);
   return (
     <div className="App" >
       {/* <h2>Hwda Bargo hello in my movie app </h2> */}
-      <SearchNavbar searchInput={searchInput} searchrating={setSearchRating}/>
+      <SearchNavbar setSearchInput={setSearchInput} setSearchRating={setSearchRating}/>
       {/* <MoviCard/> */}
       <MovieList movieslist={movieslist} 
-      searchInput={setSearchInput}
-       searchrating={setSearchRating}/>
+      searchInput={searchInput}
+      searchRating={searchRating}/>
+      setNewMovie={setNewMovie}
+      setfirstRender={setfirstRender}
     </div>
   );
 }

@@ -1,6 +1,6 @@
 const MovieData =[
     {
-    title:" coco",
+    title:"coco",
     descrption:"Coco is a 3D computer-engineered comic animated movie released in 2017, produced by Pixar Studios and distributed by The Walt Disney Film Company, and co-directed by Lee Edward Enrich and Adrian Molina.",
     posterUrl:"https://media.elcinema.com/uploads/_315x420_1dbba5023568fa4f039d47a719ca0bcbcb9224560caf500e7eea75c8fad8953a.jpg",
     rate:"4",
@@ -21,14 +21,14 @@ const MovieData =[
         trailerUrl:"",
     },
     {
-        title:" the Emperor's New Groove",
+        title:"the Emperor's New Groove",
         descrption:"The Emperor's New Life is an animated film by The Walt Disney Company. The film is a humorous genre, focusing on the extent of vanity, racism and selfishness practiced by some, without regard for the other.",
-        posterUrl:"https://lh3.googleusercontent.com/proxy/p_K51kFQc0I2ScVx0STkU7HQPLtldaLdkFTQL5C_9MFMF0s6yszpGTkLn7hKR5l1dGdbg5oD0iEXP6u-npt0Z3zJLwtYLg",
+        posterUrl:"https://lumiere-a.akamaihd.net/v1/images/open-uri20150422-12561-lxwsqg_513005ba.jpeg",
         rate:"5",
         trailerUrl:"",
     },
     {
-        title:"!Scoop",
+        title:"Scoop",
         descrption:"The latest installment in the mysterious gangster franchise reinforces the one universal truth, that Scooby-Doo never gets old. Please pull out the snacks and dive into the next gang adventure. Investigate a plot to release the evil dog Cerberus. And on their way, they discover chilling secrets. This movie is a full movie with the stars of Zac Efron, Gina Rodriguez, Gina Rodriguez, and Gina Rodriguez, and it's really fun for everyone.",
         posterUrl:"https://kidstoon.net/wp-content/uploads/2020/05/SCOOB-2020.jpg",
         rate:"1",
@@ -42,7 +42,7 @@ const MovieData =[
         trailerUrl:"",
     },
     {
-        title:"Frozen 2",
+        title:"Frozen",
         descrption:"Disney’s Frozen” is now streamed for everyone to watch and sing along with. Anna, Elsa, Kristoff, Olaf and Sven enter an enchanted forest in search of ancient secrets and frightening sounds. Once again they have to face the fact that in order to save “Arendelle”, they risk losing each other. The supplementary segment also features some distinct melodies, including “Into the Unknown” and “Reindeer Are Better than People”.",
         posterUrl:"https://upload.wikimedia.org/wikipedia/en/4/4f/Frozen_2_poster.jpg",
         rate:"5",

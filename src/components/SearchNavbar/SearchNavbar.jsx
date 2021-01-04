@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { Navbar , Nav  , FormControl , Form } from "react-bootstrap"
 import "./SearchNavbar.css"
 import ReactStars from 'react-stars'
