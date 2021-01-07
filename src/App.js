@@ -4,6 +4,10 @@ import SearchNavbar from './components/SearchNavbar/SearchNavbar'
 import { useEffect, useState } from 'react';
 import MovieData from './components/MovieData';
 import MovieList from './components/MovieList/MovieList';
+import { Route } from 'react-router-dom';
+import { Fragment } from 'react';
+import Descrption from './components/Descrption/Descrption';
+import  {Switch} from 'react-router-dom';
 // import AddMovie from './components/Addmovie/AddMovie';
 
 function App() {
@@ -12,25 +16,41 @@ function App() {
   const [searchRating , setSearchRating]=useState(0);
   const [newMovie , setNewMovie]=useState({});
 const[firstRender,setfirstRender]=useState(true);
+
   useEffect(() => {
     !firstRender
      ?setMoviesList([...movieslist,newMovie])
      :console.log("remmber")
+     // eslint-disable-next-line‏
   },[newMovie]);
   
   // console.log(MovieData);
   return (
     <div className="App" >
-      {/* <h2>Hwda Bargo hello in my movie app </h2> */}
+      <Switch>
+    <Route exact path="/" render={()=>(
+     <Fragment>
       <SearchNavbar setSearchInput={setSearchInput} setSearchRating={setSearchRating}/>
-      {/* <MoviCard/> */}
+    
       <MovieList movieslist={movieslist} 
       searchInput={searchInput}
-      searchRating={searchRating}/>
+      searchRating={searchRating}
       setNewMovie={setNewMovie}
       setfirstRender={setfirstRender}
+     />
+
+      </Fragment>
+      )}/>
+      <Route path="/movies/:id" render={({match}) => (
+      <Descrption MovieData={movieslist.find(item=>item.id===Number(match.params.id))}/> 
+      )} 
+        />
+      
+      </Switch>
+      {/* <Descrption/> */}
     </div>
-  );
+        
+          );
 }
 
 export default App;
